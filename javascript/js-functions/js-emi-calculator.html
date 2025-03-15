@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    function calculateEMI(P, annualRate, N) {
+    if (typeof P === 'undefined' || typeof annualRate === 'undefined' || typeof N === 'undefined') {
+        alert("Expecting three parameters to calculate EMI");
+        return;
+    }
+
+    
+    let R = annualRate / (12 * 100);
+
+    
+    let EMI = (P * R * Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
+
+    
+    alert(`The EMI is: ₹${EMI.toFixed(2)}`);
+}
+
+    </script>
+</head>
+<body>
+    <input type="button" value="EMICalculator" onclick="calculateEMI(1000000,12,60)"><br/>
+<input type="button" value="EMICalculator" onclick="calculateEMI(1000000,12,120)"><br/>
+<input type="button" value="Calculator1" onclick="calculateEMI(12,5)"><br/>
+<input type="button" value="Calculator1" onclick="calculateEMI(12)"><br/>
+
+</body>
+</html>
