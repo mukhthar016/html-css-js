@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        let operation="(2*2)+(2*2)";
+        alert(eval(operation))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+////<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getdet(){
+            var cityname=document.getElementById("cityname").value;
+            var output =document.getElementById("output");
+            var d = new Date();
+            d.setDate(d.getDate()+1);
+            //code for cookoe
+            document.cookie="cname="+escape(cityname)+";expires="+d.toGMTString();
+            //
+            output.innerHTML=`<font color=green>your city name is ${cityname}`
+                alert("cookie set");
+        }
+        function getCookie(name) {
+            if (document.cookie.length > 0) 
+            {
+                ind = document.cookie.indexOf(name);
+                if (ind != -1) {
+                    ind = ind + name.length + 1;
+                    ind1 = document.cookie.indexOf(";", ind);
+                         if (ind1 == -1) 
+                              ind1 = document.cookie.length;
+                    return unescape(document.cookie.substring(ind, ind1));
+                }
+            }
+            return "";
+        }
+        
+    </script>
+</head>
+<body>
+   <form>
+    <table>
+        <tr>
+            <td>
+                <input type="text"name="cityname"id="cityname">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button"value="search"id="btn"name="btn" onclick="getdet()">
+                <div id="output"></div>
+            </td>
+            
+        </tr>
+    </table>
+   </form> 
+</body>
+</html>*/
