@@ -17,7 +17,7 @@
             }
             document.getElementById("cr").value = cntr;
             var d = new Date();
-            d.setDate(d.getDate() + 1);
+            d.setDate(d.getDate() + 10);
             document.cookie = "cname=" + escape(cntr) + ";expires=" + d.toGMTString()
 
         
@@ -34,7 +34,7 @@
                     return unescape(document.cookie.substring(ind, ind1));
                 } 
             }
-            return "counter is empty";
+            return "";
         }
 
         function checkCookies() {
